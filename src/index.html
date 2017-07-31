@@ -7,6 +7,176 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+     <script src="assets/jquery.min.js"></script>
+        <script src="http://localhost:3000/javascript/jquery/infiniteSlider2.js"></script>
+  <script src="http://cdn.auth0.com/js/auth0/8.5/auth0.min.js"></script>
+
+
+        <style type="text/css">
+        
+    .btn-primary {
+      background-color:#9D96D6;
+      color:#F9F9F9;
+      border-color:#7d72d1 !important;
+    }
+
+    .btn-primary:hover {
+      background-color:#9D96D6;
+      color:#F9F9F9;
+      border-color:#7d72d1 !important;
+
+      opacity: 0.65
+    }
+
+    .btn-primary.active, .btn-primary:active {
+       background-color:#9089C4;
+      color:#FCFCFC;
+      border-color:#7d72d1 !important;
+
+    }
+
+ 
+        ul#nav-menu {
+          height: 70px;
+        }
+        ul#nav-menu li {
+          margin-left: 30px;
+          padding: 17px;
+          font-size: 120%;
+          font-weight: bolder;
+
+      }
+      .navbar-default {
+          background-color:#edede3;
+          border-color: #e7e7e7;
+      }
+      .container{
+        background-color:#f4f4f9
+      }
+      
+      .container-header{
+        background-color:#f2f2f4
+      }
+      img#logo{
+           
+      }
+      body{
+        background-color: #f9f9f9;  
+      }
+
+      /*block quote*/
+
+      blockquote{
+        display:block;
+        background: #fff;
+        padding: 15px 20px 15px 45px;
+        margin: 0 0 20px;
+        position: relative;
+        
+        /*Font*/
+        font-family: Georgia, serif;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #666;
+        text-align: justify;
+        
+        /*Borders - (Optional)*/
+        border-left: 15px solid#7d72d1;
+        border-right: 2px solid #7d72d1;
+        
+        /*Box Shadow - (Optional)*/
+        -moz-box-shadow: 2px 2px 15px #ccc;
+        -webkit-box-shadow: 2px 2px 15px #ccc;
+        box-shadow: 2px 2px 15px #ccc;
+      }
+
+       #nav-menu pills>li >a , .nav-pills>li>a {
+          background-color:#F9F9F9;
+          color:#9D96D6;
+      }
+
+      #nav-menu pills>li.active>a:focus, .nav-pills>li.active>a {
+          background-color:#7d72d1;
+      }
+
+      #nav-menu pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+          background-color:#d2d1e8;
+      }
+
+      #nav-menu pills>li.active>a:focus, .nav-pills>li.active>a:focus {
+          background-color:#7d72d1;
+      }
+
+
+      blockquote::before{
+        content: "\201C"; /*Unicode for Left Double Quote*/
+        
+        /*Font*/
+        font-family: Georgia, serif;
+        font-size: 60px;
+        font-weight: bold;
+        color: #999;
+        
+        /*Positioning*/
+        position: absolute;
+        left: 10px;
+        top:5px;
+      }
+
+      blockquote::after{
+        /*Reset to make sure*/
+        content: "";
+      }
+
+      blockquote a{
+        text-decoration: none;
+        background: #eee;
+        cursor: pointer;
+        padding: 0 3px;
+        color: #c76c0c;
+      }
+
+      blockquote a:hover{
+      color: #666;
+      }
+
+      blockquote em{
+        font-style: italic;
+    }
+    
+          
+    footer ul{
+        padding-left: 250px;
+      
+        
+        /*For gradient*/
+      
+        color: #FFFFFF;
+      }
+
+      .background-3 {
+        background-color: #e8e8e3;
+      
+      }
+      
+      footer li{
+        display: inline-block;
+        margin-left: 50px;
+      }
+    </style>
+
+
 </head>
 <body>
   <app-root>Loading...</app-root>

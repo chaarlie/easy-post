@@ -1,0 +1,44 @@
+ <nav class="navbar  " >
+      
+      <div class="container container-header">
+          <img id="log" src="http:\\localhost:3000\comment-logo.png" width="250" height="180">
+        
+
+<style>
+
+</style>
+        <ul id="nav-menu" class="nav nav-pills navbar-default">
+          <li role="presentation" class=" btn-md" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"  ><a [routerLink]="['/home']"  >Home</a></li>
+          <li role="presentation" class=" btn-md" [routerLinkActive]="['active']" ><a [routerLink]="['/login']">Login</a></li>
+          <li role="presentation" class=" btn-md" [routerLinkActive]="['active']" ><a href="#">Display Post</a></li>
+        </ul>
+ 
+      </div>
+    </nav>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+  
+    <br>
+  
+    <div class="background-3  container">
+      <div class=" pull-right">
+              <a [routerLink]="['/personal-info']" ><strong>Register</strong></a>
+        </div>
+        <br>
+        <br>
+    </div>
+
+  <footer class="container">
+        
+      <br>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Display Posts</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <br>
+  </footer>

@@ -1,0 +1,122 @@
+<div class="background-3 col-md-4">
+<style>
+    #post-text textarea{
+        font-family: "Lucida Console",Monaco,monospace;
+    }
+    .test{background-color:#F9F9F9}
+    #data{
+        max-height: 100px;
+        overflow-y: scroll;
+        border-radius: 8px 8px  8px 8px;
+
+    }
+    #tags-selection{
+          max-height: 80px;
+        overflow-y: scroll;
+        border-radius: 0px 0px  8px 8px;
+    }
+    #tags-selection li{
+        
+        display: block;
+        color: #9D96D6;
+        background-color: #F9F9F9;
+        font-weight: bolder;
+        text-align: -webkit-match-parent;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        
+    }
+    #tags-selection li:hover{
+        background-color: #D1CFE8;
+        cursor: pointer;
+    }
+    .control-header{
+        margin-top: 5%;
+        background-color: #F9F9F9;
+        color: #9D96D6;
+        border-radius: 4px;
+        padding-left: 20px;
+        position: relative;
+        display: block;
+        text-decoration: none;
+        font-size: 100%;
+        font-weight: bolder;
+        text-align: -webkit-match-parent;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.42857143;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        box-sizing: border-box;
+    }
+
+    .tag{
+        margin-top: 5%;
+        background-color:#9D96D6;
+        color: white;
+        border-radius: 4px;
+        padding: 5px 8px 5px 8px;
+        
+        display: inline-block;
+        text-decoration: none;
+        font-size: 100%;
+        font-weight: bolder;
+        text-align: -webkit-match-parent;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        box-sizing: border-box;
+    }
+</style>
+<form *ngIf="!response">
+    <div class="form-group  col-md-offset-2 col-md-8">
+    <label class="control-header col-md-offset-4 col-md-5" for="tile">Title</label>
+    <input type="title" name="title" [(ngModel)]="post.title" class="form-control test" id="title">
+  </div>
+  <div class="form-group  col-md-offset-2 col-md-8">
+    <label for="tags" class="control-header col-md-offset-4 col-md-5" >Tags</label>
+    <input type="title" name="tags" class="form-control test"   #search id="tags" (keyup)="0">
+    <div id="tags-selection" *ngIf="tags" class=" test">
+        <ul>
+            <li *ngFor="let tag of (tags | searchFilter: search.value ) " (click)='addTag(tag)' class="tag-select">
+                {{tag.name}} 
+            </li>
+        </ul>
+    </div>
+
+    <div id="data" *ngIf="selectedTags" class=" test">
+        <ul>
+            <li *ngFor="let tag of selectedTags" class="tag">{{tag.name}}</li>
+        </ul>
+    </div>
+  </div>
+  <div id="post-text" class="form-group col-md-offset-1 ">
+       <div class="col-md-offset-2"> <label for="tags" class="control-header col-md-offset-2 col-md-4" >Content</label></div>
+    <textarea class="test" name="content" rows="5" cols="32" [(ngModel)]="post.content"> </textarea>
+  </div>
+
+  <div class="form-group"> 
+        <div class="col-md-4 col-md-offset-3    col-sm-10">
+          <div class="form-group     ">        
+            <a (click)="savePost($event)"  class="btn btn-block btn-primary col-md-offset-3"> Publish 
+          </a>
+        </div>
+        </div>
+  </div>
+
+</form>
+
+<style>
+.success-response{
+    background-color: #00BC8C;
+    color:white;
+    text-transform: uppercase;
+}
+</style>
+<div class="row" *ngIf="response">
+    <br>
+    <br>
+    <div class="col-md-7 col-sm-6 col-md-offset-2  " >
+        <div class="col-md-offset-1">
+            <div class="alert alert-success">{{response}} </div>
+            <br>
+        </div>
+    </div>
+    </div>
+
+</div>
