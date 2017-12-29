@@ -20,11 +20,10 @@ describe('Test login route', function() {
             password: 'xyz',
             email: 'someotheruser01@domain.com'
         };
+        
         var testUser = new User(entry);
-console.log('here i be')
         User.create(testUser, function(err, newCreatedUser) {
           //  if(err) throw new Error(err.message);
-         
           
             it('it should authenticate the new user', function(done)  {
                 chai.request(server).post('/api/login/')
