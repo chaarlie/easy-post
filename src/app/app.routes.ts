@@ -17,32 +17,25 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]  },
-    { path: 'personal-info', component: PersonalInfoComponent}, 
-    { path: 'account-info', component: AccountInfoComponent}, 
-    { path: 'contact-info', component: ContactInfoComponent
-}, {
-    path: 'complete',
-    component:CompleteRegistrationComponent
-},
-    // {
-    //     path: 'registration', 
-    //     component: RegistrationComponent, 
-    //     children: [
-    //         {
-    //             path: 'personal-info',
-    //             component: PersonalInfoComponent
-    //         }, {
-    //             path: 'account-info',
-    //             component: AccountInfoComponent
-    //         }, {
-    //             path: 'contact-info',
-    //             component: ContactInfoComponent
-    //         }, {
-    //             path: 'complete',
-    //             component:CompleteRegistrationComponent
-    //         }
-    //     ]
-    //  },
+    {
+        path: 'register', 
+        component: RegistrationComponent, 
+        children: [
+            {
+                path: '' ,
+                component: PersonalInfoComponent
+            }, {
+                path: 'account-info',
+                component: AccountInfoComponent
+            }, {
+                path: 'contact-info',
+                component: ContactInfoComponent
+            }, {
+                path: 'complete',
+                component:CompleteRegistrationComponent
+            }
+        ]
+     },
      { path: 'unauthorized', component: NotAuthorizedComponent }
 ];
 

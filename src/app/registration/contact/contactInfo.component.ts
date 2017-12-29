@@ -20,16 +20,7 @@ import {RegistrationDataService} from '../../data/registrationData.service';
         </div>
       </div>
       
-      <br>  
-
-      <div class="form-group"> 
-        <div class="col-md-2 col-md-offset-5    col-sm-10">  
-          <div class="form-group">        
-            <a (click)="saveInfo()"  [routerLink]="['/complete']" class="btn btn-block btn-primary col-md-offset-3">&nbsp; Finish &nbsp;  
-          </a>
-        </div>
-      </div>
-      </div>
+    
     </form>
     `
 })
@@ -37,7 +28,8 @@ import {RegistrationDataService} from '../../data/registrationData.service';
 export class ContactInfoComponent{
     private email = '';
     private phone = '';
-
+    private routeName = 'complete';
+    
     constructor (private registrationService: RegistrationDataService){}
 
     saveInfo(){

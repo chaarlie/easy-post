@@ -1,69 +1,6 @@
 <div class="background-3 col-md-4">
-<style>
-    #post-text textarea{
-        font-family: "Lucida Console",Monaco,monospace;
-    }
-    .test{background-color:#F9F9F9}
-    #data{
-        max-height: 100px;
-        overflow-y: scroll;
-        border-radius: 8px 8px  8px 8px;
 
-    }
-    #tags-selection{
-          max-height: 80px;
-        overflow-y: scroll;
-        border-radius: 0px 0px  8px 8px;
-    }
-    #tags-selection li{
-        
-        display: block;
-        color: #9D96D6;
-        background-color: #F9F9F9;
-        font-weight: bolder;
-        text-align: -webkit-match-parent;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        
-    }
-    #tags-selection li:hover{
-        background-color: #D1CFE8;
-        cursor: pointer;
-    }
-    .control-header{
-        margin-top: 5%;
-        background-color: #F9F9F9;
-        color: #9D96D6;
-        border-radius: 4px;
-        padding-left: 20px;
-        position: relative;
-        display: block;
-        text-decoration: none;
-        font-size: 100%;
-        font-weight: bolder;
-        text-align: -webkit-match-parent;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        line-height: 1.42857143;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        box-sizing: border-box;
-    }
-
-    .tag{
-        margin-top: 5%;
-        background-color:#9D96D6;
-        color: white;
-        border-radius: 4px;
-        padding: 5px 8px 5px 8px;
-        
-        display: inline-block;
-        text-decoration: none;
-        font-size: 100%;
-        font-weight: bolder;
-        text-align: -webkit-match-parent;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        box-sizing: border-box;
-    }
-</style>
-<form *ngIf="!response">
+ <form *ngIf="!response">
     <div class="form-group  col-md-offset-2 col-md-8">
     <label class="control-header col-md-offset-4 col-md-5" for="tile">Title</label>
     <input type="title" name="title" [(ngModel)]="post.title" class="form-control test" id="title">
@@ -100,14 +37,6 @@
   </div>
 
 </form>
-
-<style>
-.success-response{
-    background-color: #00BC8C;
-    color:white;
-    text-transform: uppercase;
-}
-</style>
 <div class="row" *ngIf="response">
     <br>
     <br>

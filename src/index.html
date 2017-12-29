@@ -17,19 +17,18 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-     <script src="assets/jquery.min.js"></script>
-        <script src="http://localhost:3000/javascript/jquery/infiniteSlider2.js"></script>
-  <script src="http://cdn.auth0.com/js/auth0/8.5/auth0.min.js"></script>
-
-
-        <style type="text/css">
-        
+    
+    <script src="app.js"></script>
+    <script src="assets/jquery.min.js"></script>
+    <script src="http://localhost:3000/javascript/jquery/infiniteSlider2.js"></script>
+    <script src="http://cdn.auth0.com/js/auth0/8.5/auth0.min.js"></script>
+    
+    <style type="text/css">
     .btn-primary {
       background-color:#9D96D6;
       color:#F9F9F9;
       border-color:#7d72d1 !important;
-    }
+     }
 
     .btn-primary:hover {
       background-color:#9D96D6;
@@ -47,14 +46,14 @@
     }
 
  
-        ul#nav-menu {
-          height: 70px;
-        }
-        ul#nav-menu li {
-          margin-left: 30px;
-          padding: 17px;
-          font-size: 120%;
-          font-weight: bolder;
+      ul#nav-menu {
+        height: 70px;
+      }
+      ul#nav-menu li {
+        margin-left: 30px;
+        padding: 17px;
+        font-size: 120%;
+        font-weight: bolder;
 
       }
       .navbar-default {
@@ -153,11 +152,10 @@
 
       blockquote em{
         font-style: italic;
-    }
-    
-          
-    footer ul{
-        padding-left: 250px;
+     }
+     
+     footer ul{
+       padding-left: 250px;
       
         
         /*For gradient*/
@@ -174,6 +172,75 @@
         display: inline-block;
         margin-left: 50px;
       }
+      /*dashboard*/
+      .success-response{
+        background-color: #00BC8C;
+        color:white;
+        text-transform: uppercase;
+      } 
+      #post-text textarea{
+          font-family: "Lucida Console",Monaco,monospace;
+      }
+      .test{background-color:#F9F9F9}
+      #data{
+          max-height: 100px;
+          overflow-y: scroll;
+          border-radius: 8px 8px  8px 8px;
+
+      }
+      #tags-selection{
+        max-height: 80px;
+        overflow-y: scroll;
+        border-radius: 0px 0px  8px 8px;
+      }
+        #tags-selection li{
+            
+            display: block;
+            color: #9D96D6;
+            background-color: #F9F9F9;
+            font-weight: bolder;
+            text-align: -webkit-match-parent;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            
+        }
+        #tags-selection li:hover{
+            background-color: #D1CFE8;
+            cursor: pointer;
+        }
+        .control-header{
+            margin-top: 5%;
+            background-color: #F9F9F9;
+            color: #9D96D6;
+            border-radius: 4px;
+            padding-left: 20px;
+            position: relative;
+            display: block;
+            text-decoration: none;
+            font-size: 100%;
+            font-weight: bolder;
+            text-align: -webkit-match-parent;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            line-height: 1.42857143;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            box-sizing: border-box;
+        }
+
+        .tag{
+            margin-top: 5%;
+            background-color:#9D96D6;
+            color: white;
+            border-radius: 4px;
+            padding: 5px 8px 5px 8px;
+            
+            display: inline-block;
+            text-decoration: none;
+            font-size: 100%;
+            font-weight: bolder;
+            text-align: -webkit-match-parent;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            box-sizing: border-box;
+        }
+
     </style>
 
 
